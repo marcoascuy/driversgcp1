@@ -24,10 +24,10 @@ from google.oauth2.credentials import Credentials
 # Create credentials object from loaded information
 credentials = Credentials(
     token=None,
-    refresh_token=st.secrets["refresh_token"],
+    refresh_token=st.secrets.get("REFRESH_TOKEN"),
     token_uri="https://oauth2.googleapis.com/token",
-    client_id=st.secrets["client_id"],
-    client_secret=st.secrets["client_secret"],
+    client_id=st.secrets.get("CLIENT_ID"),
+    client_secret=st.secrets.get("CLIENT_SECRET"),
     scopes=["https://www.googleapis.com/auth/cloud-platform"],
 )
 
